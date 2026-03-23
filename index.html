@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Professional Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="welcome-screen">
+  <div class="loader-box">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Loading experience...</p>
+
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="progress-count" id="progress-count">1%</div>
+  </div>
+</div>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text fade-up">
+        <p class="tag">Computer Science Undergraduate</p>
+        <h1>Hello, I'm <span>Disadhi Ranasinghe</span></h1>
+        <p class="lead">
+          I am a passionate and aspiring Computer Science undergraduate with a strong
+          interest in technology, web development, problem-solving and continuous
+          learning. I enjoy building modern digital solutions, developing my technical
+          skills and growing into a confident professional ready to contribute to the industry.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+          <a href="contact.html" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/_disdyyy_?igsh=MXgzbHI1anJtemptaA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/disadhi-ranasinghe-a74734332/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/disdyy" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-image fade-in">
+        <img src="Images/Me.png" alt="Profile Photo" />
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What I Do</h2>
+        <p>Focused on learning, building, and growing in the field of technology.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Web Development</h3>
+          <p>
+            Building responsive and visually appealing websites using modern frontend
+            and backend technologies.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Problem Solving</h3>
+          <p>
+            Applying analytical thinking and logical approaches to solve technical
+            and real-world challenges.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Continuous Learning</h3>
+          <p>
+            Constantly improving my skills through academic work, projects and
+            hands-on practice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>MyPortfolio</h3>
+        <p>Passionate Computer Science undergraduate driven to build impactful, user-friendly solutions while continuously learning and growing as a developer.
+          Currently seeking opportunities to apply my skills and make a meaningful contribution as a Full Stack Engineer.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Connect With Me</h4>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/yourprofile" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/yourprofile" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  window.addEventListener("load", function () {
+    const welcomeScreen = document.getElementById("welcome-screen");
+    const progressBar = document.getElementById("progress-bar");
+    const progressCount = document.getElementById("progress-count");
+
+    let count = 1;
+
+    const interval = setInterval(() => {
+      progressCount.textContent = count + "%";
+      progressBar.style.width = count + "%";
+
+      if (count >= 100) {
+        clearInterval(interval);
+
+        setTimeout(() => {
+          welcomeScreen.classList.add("hide");
+        }, 300);
+      }
+
+      count++;
+    }, 25);
+  });
+</script>
+
+</body>
+</html>
