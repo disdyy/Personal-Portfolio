@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('progress-bar');
   const progressCount = document.getElementById('progress-count');
   const welcomeScreen = document.getElementById('welcome-screen');
-  const contactForm = document.getElementById('contact-form');
 
   if (year) {
     year.textContent = new Date().getFullYear();
@@ -56,17 +55,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 18);
 
     window.setTimeout(() => welcomeScreen.classList.add('hide'), 1600);
-  }
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const name = encodeURIComponent(document.getElementById('name').value.trim());
-      const email = encodeURIComponent(document.getElementById('email').value.trim());
-      const message = encodeURIComponent(document.getElementById('message').value.trim());
-      const subject = encodeURIComponent(`Portfolio message from ${decodeURIComponent(name)}`);
-      const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(message)}`);
-      window.location.href = `mailto:ranasinghedisadhi@gmail.com?subject=${subject}&body=${body}`;
-    });
   }
 });
