@@ -3,155 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Professional Portfolio</title>
+  <meta name="description" content="Disadhi Ranasinghe - Computer Science undergraduate and software engineering intern portfolio." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Disadhi Ranasinghe | Software Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="welcome-screen">
-  <div class="loader-box">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Loading experience...</p>
-
-    <div class="progress-wrap">
-      <div class="progress-bar" id="progress-bar"></div>
+  <div id="welcome-screen" aria-hidden="true">
+    <div class="loader-box">
+      <span class="loader-kicker">Portfolio loading</span>
+      <h1>Disadhi Ranasinghe</h1>
+      <p>Preparing a modern software engineering experience</p>
+      <div class="progress-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="progress-count" id="progress-count">1%</div>
     </div>
-
-    <div class="progress-count" id="progress-count">1%</div>
   </div>
-</div>
 
   <header class="header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">MyPortfolio</a>
-      <nav class="nav">
+      <a href="index.html" class="logo" aria-label="Disadhi Ranasinghe home">
+        <img src="Images/DR_logo.jpeg" alt="Disadhi Ranasinghe logo" class="logo-img" style="border-radius: 8px;" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text fade-up">
-        <p class="tag">Computer Science Undergraduate</p>
-        <h1>Hello, I'm <span>Disadhi Ranasinghe</span></h1>
-        <p class="lead">
-          I am a passionate and aspiring Computer Science undergraduate with a strong
-          interest in technology, web development, problem-solving and continuous
-          learning. I enjoy building modern digital solutions, developing my technical
-          skills and growing into a confident professional ready to contribute to the industry.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="about.html" class="btn btn-primary">Learn More</a>
-          <a href="contact.html" class="btn btn-outline">Contact Me</a>
-        </div>
-
-        <div class="social-links">
-          <a href="https://www.instagram.com/_disdyyy_?igsh=MXgzbHI1anJtemptaA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-          <a href="https://www.linkedin.com/in/disadhi-ranasinghe-a74734332/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/disdyy" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <div class="hero-image fade-in">
-        <img src="Images/me.png" alt="Profile Photo" />
-      </div>
-    </div>
-  </section>
-
-  <section class="highlights section">
-    <div class="container">
-      <div class="section-title">
-        <h2>What I Do</h2>
-        <p>Focused on learning, building, and growing in the field of technology.</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Web Development</h3>
-          <p>
-            Building responsive and visually appealing websites using modern frontend
-            and backend technologies.
+  <main>
+    <section class="hero hero-home" id="home">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Computer Science Undergraduate • Software Engineering Intern</p>
+          <h1>Designing clean digital products with code, data and thoughtful UX.</h1>
+          <p class="lead">
+            I’m Disadhi Ranasinghe, a Computer Science undergraduate focused on full-stack web development, Python systems and practical user-centred software. I enjoy turning academic and real-world ideas into polished, responsive and maintainable applications.
           </p>
+
+          <div class="hero-buttons">
+            <a href="blog.html" class="btn btn-primary">View Projects</a>
+            <a href="CV/Disadhi_Ranasinghe_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline">View My CV</a>
+          </div>
+
+          <div class="social-links" aria-label="Social links">
+            <a href="https://github.com/disdyy" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/disadhi-ranasinghe-a74734332/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:ranasinghedisadhi@gmail.com">Email</a>
+          </div>
         </div>
-        <div class="info-card">
-          <h3>Problem Solving</h3>
-          <p>
-            Applying analytical thinking and logical approaches to solve technical
-            and real-world challenges.
-          </p>
-        </div>
-        <div class="info-card">
-          <h3>Continuous Learning</h3>
-          <p>
-            Constantly improving my skills through academic work, projects and
-            hands-on practice.
-          </p>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="profile-card">
+            <div class="status-pill"><span></span> Open to internships</div>
+            <img src="Images/me.png" alt="Disadhi Ranasinghe" />
+            <div class="profile-meta">
+              <strong>Disadhi Ranasinghe</strong>
+              <span>Full-stack learner • Sri Lanka</span>
+            </div>
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="floating-icon">{ }</span>
+            <div><strong>Frontend</strong><small>React • Vite • CSS</small></div>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <span class="floating-icon">⚙</span>
+            <div><strong>Backend</strong><small>FastAPI • MySQL • REST</small></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section compact-section">
+      <div class="container stats-grid reveal">
+        <div class="stat-card"><strong>6+</strong><span>Academic & personal projects</span></div>
+        <div class="stat-card"><strong>10+</strong><span>Technologies explored</span></div>
+        <div class="stat-card"><strong>2024</strong><span>BSc Computer Science started</span></div>
+        <div class="stat-card"><strong>Full-stack</strong><span>Current career direction</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">My expertise</span>
+          <h2>Building foundations across the software stack.</h2>
+          <p>I combine frontend design, backend logic, database thinking and problem-solving to build usable digital experiences.</p>
+        </div>
+
+        <div class="card-grid expertise-grid">
+          <article class="info-card reveal">
+            <span class="card-icon">01</span>
+            <h3>Web Development</h3>
+            <p>Responsive pages and applications using HTML, CSS, JavaScript, React, Vite, Bootstrap and Tailwind CSS.</p>
+          </article>
+          <article class="info-card reveal delay-1">
+            <span class="card-icon">02</span>
+            <h3>Backend & APIs</h3>
+            <p>REST API concepts, FastAPI, JWT authentication, MySQL integration and data-driven dashboard workflows.</p>
+          </article>
+          <article class="info-card reveal delay-2">
+            <span class="card-icon">03</span>
+            <h3>Python & Data</h3>
+            <p>Python applications using CSV processing, Tkinter, Pandas, Scikit-learn, Streamlit and machine-learning basics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container split-grid">
+        <div class="section-heading left reveal">
+          <span class="section-label">Featured project</span>
+          <h2>PerformEdge HR System Tracking Dashboard</h2>
+          <p>A full-stack HR dashboard created to manage employee records, attendance and performance through secure APIs, visual analytics and a professional user interface.</p>
+          <div class="pill-row">
+            <span>FastAPI</span><span>MySQL</span><span>Chart.js</span><span>JWT</span><span>Tailwind CSS</span>
+          </div>
+          <a href="https://performedge.me/" target="_blank" rel="noopener" class="btn btn-primary top-space">Visit Live Project</a>
+        </div>
+        <div class="project-preview reveal delay-1">
+          <img src="Images/PerformEdge.png" alt="PerformEdge dashboard preview" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects-preview">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Selected work</span>
+          <h2>Projects that show practical learning.</h2>
+          <p>Each project helped me strengthen a different part of software development, from UI implementation to backend integration and Python problem solving.</p>
+        </div>
+        <div class="mini-project-grid">
+          <article class="mini-project-card reveal">
+            <img src="Images/PropertySearch.png" alt="Property Search web application" />
+            <div>
+              <span>React • Vite</span>
+              <h3>Property Search Web App</h3>
+              <p>Search, filter, favourite and explore property listings in a responsive frontend experience.</p>
+            </div>
+          </article>
+          <article class="mini-project-card reveal delay-1">
+            <img src="Images/traffic-data.jpg" alt="Traffic data analysis project" />
+            <div>
+              <span>Python • Tkinter</span>
+              <h3>Traffic Data Analysis System</h3>
+              <p>Validates CSV traffic datasets and visualises vehicle-flow statistics through histograms.</p>
+            </div>
+          </article>
+          <article class="mini-project-card reveal delay-2">
+            <img src="Images/AI_Based_Risk_Prediction_System.png" alt="Employee risk prediction project" />
+            <div>
+              <span>Python • ML</span>
+              <h3>Employee Risk Prediction</h3>
+              <p>Random Forest model and Streamlit app for predicting employee performance risk levels.</p>
+            </div>
+          </article>
+        </div>
+        <div class="center top-space reveal">
+          <a href="blog.html" class="btn btn-outline">Explore All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-strip">
+      <div class="container contact-strip-inner reveal">
+        <div>
+          <span class="section-label">Let’s connect</span>
+          <h2>Looking for a software engineer intern?</h2>
+          <p>I’m open to internship opportunities, collaborative projects and professional networking.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Contact Me</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <h3>MyPortfolio</h3>
-        <p>Passionate Computer Science undergraduate driven to build impactful, user-friendly solutions while continuously learning and growing as a developer.
-          Currently seeking opportunities to apply my skills and make a meaningful contribution as a Full Stack Engineer.
-        </p>
+      <div class="footer-brand">
+        <p class="footer-brand-title">About</p>
+        <p>Computer Science undergraduate building polished full-stack applications, data solutions and clean UX experiences with a practical engineering approach.</p>
+        <div class="footer-social">
+          <a href="https://github.com/disdyy" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/disadhi-ranasinghe-a74734332/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:ranasinghedisadhi@gmail.com">Email</a>
+        </div>
       </div>
-
-      <div>
+      <div class="footer-links-group">
         <h4>Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
-      <div>
-        <h4>Connect With Me</h4>
-        <ul class="footer-links">
-          <li><a href="https://www.instagram.com/_disdyyy_?igsh=MXgzbHI1anJtemptaA%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/in/disadhiranasinghe/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/disdyy" target="_blank">GitHub</a></li>
-        </ul>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>ranasinghedisadhi@gmail.com</p>
+        <p>+94 77 325 1508</p>
+        <p>Panadura, Sri Lanka</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Your Name. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Disadhi Ranasinghe. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-  window.addEventListener("load", function () {
-    const welcomeScreen = document.getElementById("welcome-screen");
-    const progressBar = document.getElementById("progress-bar");
-    const progressCount = document.getElementById("progress-count");
-
-    let count = 1;
-
-    const interval = setInterval(() => {
-      progressCount.textContent = count + "%";
-      progressBar.style.width = count + "%";
-
-      if (count >= 100) {
-        clearInterval(interval);
-
-        setTimeout(() => {
-          welcomeScreen.classList.add("hide");
-        }, 300);
-      }
-
-      count++;
-    }, 25);
-  });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
