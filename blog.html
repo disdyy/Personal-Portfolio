@@ -3,115 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Professional Portfolio</title>
+  <meta name="description" content="Selected software projects by Disadhi Ranasinghe." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Projects | Disadhi Ranasinghe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">MyPortfolio</a>
-      <nav class="nav">
+      <a href="index.html" class="logo" aria-label="Disadhi Ranasinghe home">
+        <img src="Images/DR_logo.jpeg" alt="Disadhi Ranasinghe logo" class="logo-img" style="border-radius: 8px;" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="blog.html" class="active">Blog</a>
+        <a href="blog.html" class="active">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="page-banner">
-    <div class="container">
-      <h1>My Projects</h1>
-      <p>A showcase of the projects I have built during my academic journey.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container project-list">
-
-      <article class="project-card fade-up">
-        <img src="Images/PerformEdge.png" alt="PerformEdge HR System Project" />
-        <div class="project-content">
-          <h2>PerformEdge HR System Tracking Dashboard Web Application</h2>
-          <p class="tech-stack">
-            Tailwind CSS, FastAPI (Python), MySQL, REST APIs, Chart.js, Axios, JWT Authentication, Git
-          </p>
-          <p>
-            Developed PerformEdge, a full-stack web-based HR dashboard for managing
-            employee data, attendance and performance. This application was designed to
-            improve HR management through a professional dashboard interface, secure user
-            authentication, and clear data visualization.
-          </p>
-          <p>
-          <a href="https://performedge.me/" target="_blank" rel="noopener">https://performedge.me/</a>
-          </p>
-
+  <main>
+    <section class="page-hero projects-hero">
+      <div class="container page-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Selected projects</p>
+          <h1>Practical software work across web, backend, data and AI.</h1>
+          <p class="lead">A curated collection of projects from my academic journey and self-learning. These projects show how I approach user interfaces, APIs, data workflows and problem solving.</p>
         </div>
-      </article>
-
-      <article class="project-card fade-up">
-        <img src="Images/PropertySearch.png" alt="Property Search Web Application Project" />
-        <div class="project-content">
-          <h2>Property Search Web Application</h2>
-          <p class="tech-stack">
-            React, Vite, JavaScript, CSS
-          </p>
-          <p>
-            Built a responsive frontend application using React, Vite, React Router,
-            JavaScript and CSS to search and view property listings, filter results,
-            manage favourites and view property details with map integration.
-          </p>
+        <div class="page-hero-card reveal delay-1">
+          <span>Project focus</span>
+          <strong>Build, test, improve and document solutions that solve clear problems.</strong>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="project-card fade-up">
-        <img src="Images/traffic-data.jpg" alt="Traffic Data Analysis System Project" />
-        <div class="project-content">
-          <h2>Traffic Data Analysis System</h2>
-          <p class="tech-stack">
-            Python, CSV module, Tkinter
-          </p>
-          <p>
-            Developed a Python-based application using CSV and Tkinter to validate input
-            dates, process traffic survey datasets, generate statistical reports, and
-            visualize hourly vehicle flow using histograms.
-          </p>
-        </div>
-      </article>
+    <section class="section">
+      <div class="container project-list">
+        <article class="project-card featured-project-card reveal">
+          <div class="project-image-wrap"><img src="Images/PerformEdge.png" alt="PerformEdge HR dashboard project" /></div>
+          <div class="project-content">
+            <span class="project-type">Full-stack dashboard</span>
+            <h2>PerformEdge HR System Tracking Dashboard</h2>
+            <p>Developed a full-stack HR dashboard for managing employee data, attendance and performance. The platform focuses on secure authentication, API-driven workflows, HR reports and professional visual dashboards.</p>
+            <div class="pill-row"><span>Tailwind CSS</span><span>FastAPI</span><span>MySQL</span><span>REST APIs</span><span>Chart.js</span><span>Axios</span><span>JWT</span><span>Git</span></div>
+            <div class="project-actions"><a href="https://performedge.me/" target="_blank" rel="noopener" class="btn btn-primary">Live Project</a></div>
+          </div>
+        </article>
 
-    </div>
-  </section>
+        <article class="project-card reveal">
+          <div class="project-image-wrap"><img src="Images/PropertySearch.png" alt="Property Search web application" /></div>
+          <div class="project-content">
+            <span class="project-type">Frontend web app</span>
+            <h2>Property Search Web Application</h2>
+            <p>Built a responsive React and Vite frontend application to search and view property listings, apply filters, manage favourites and explore detailed property information.</p>
+            <div class="pill-row"><span>React</span><span>Vite</span><span>JavaScript</span><span>CSS</span><span>React Router</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image-wrap"><img src="Images/Employee_Risk_Prediction.png" alt="Employee risk prediction project" /></div>
+          <div class="project-content">
+            <span class="project-type">Machine learning</span>
+            <h2>AI-Based Employee Performance Risk Prediction System</h2>
+            <p>Created a machine-learning system to predict employee performance risk levels using attendance, absenteeism, task completion, task rating and previous performance score data.</p>
+            <div class="pill-row"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Random Forest</span><span>Streamlit</span><span>Joblib</span></div>
+            <div class="project-actions"><a href="https://github.com/disdyy/ai-employee-performance-risk-prediction.git" target="_blank" rel="noopener" class="btn btn-outline">GitHub Repo</a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image-wrap"><img src="Images/traffic-data.jpg" alt="Traffic data analysis project" /></div>
+          <div class="project-content">
+            <span class="project-type">Python desktop tool</span>
+            <h2>Traffic Data Analysis System</h2>
+            <p>Developed a Python application using CSV and Tkinter to validate input dates, process traffic survey datasets, generate statistical reports and visualise hourly vehicle flow using histograms.</p>
+            <div class="pill-row"><span>Python</span><span>CSV module</span><span>Tkinter</span><span>Data Processing</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image-wrap project-code-card secondary-code-card"><span>UI</span></div>
+          <div class="project-content">
+            <span class="project-type">Product design</span>
+            <h2>PerformEdge UI Design</h2>
+            <p>Designed the PerformEdge user interface in Figma with a focus on intuitive layouts, dashboard usability and clear presentation of HR information.</p>
+            <div class="pill-row"><span>Figma</span><span>UI Design</span><span>Dashboard UX</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image-wrap"><img src="Images/Portfolio.png" alt="Personal portfolio website" /></div>
+          <div class="project-content">
+            <span class="project-type">Portfolio website</span>
+            <h2>Personal Portfolio Website</h2>
+            <p>Developed a responsive personal portfolio website to showcase profile information, projects, CV download and professional contact details with a polished multi-page layout.</p>
+            <div class="pill-row"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span></div>
+            <div class="project-actions"><a href="https://github.com/disdyy/Personal-Portfolio.git" target="_blank" rel="noopener" class="btn btn-outline">GitHub Repo</a></div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <h3>MyPortfolio</h3>
-        <p>Passionate Computer Science undergraduate driven to build impactful, user-friendly solutions while continuously learning and growing as a developer.
-        Currently seeking opportunities to apply my skills and make a meaningful contribution as a Full Stack Engineer.</p>
+      <div class="footer-brand">
+        <p class="footer-brand-title">About</p>
+        <p>Computer Science undergraduate building polished full-stack applications, data solutions and clean UX experiences with a practical engineering approach.</p>
+        <div class="footer-social">
+          <a href="https://github.com/disdyy" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/disadhi-ranasinghe-a74734332/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:ranasinghedisadhi@gmail.com">Email</a>
+        </div>
       </div>
-
-      <div>
+      <div class="footer-links-group">
         <h4>Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
-      <div>
-        <h4>Connect With Me</h4>
-        <ul class="footer-links">
-          <li><a href="https://www.instagram.com/_disdyyy_?igsh=MXgzbHI1anJtemptaA%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/in/disadhiranasinghe/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/disdyy" target="_blank">GitHub</a></li>
-        </ul>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>ranasinghedisadhi@gmail.com</p>
+        <p>+94 77 325 1508</p>
+        <p>Panadura, Sri Lanka</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Disadhi Ranasinghe. All rights reserved.</p>
-    </div>
+    <div class="footer-bottom"><p>&copy; <span id="year"></span> Disadhi Ranasinghe. All rights reserved.</p></div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
