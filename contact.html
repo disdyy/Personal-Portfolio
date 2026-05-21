@@ -13,9 +13,7 @@
 <body>
   <header class="header">
     <div class="container nav-container">
-      <a href="index.html" class="logo" aria-label="Disadhi Ranasinghe home">
-        <img src="Images/DR_logo.jpeg" alt="Disadhi Ranasinghe logo" class="logo-img" style="border-radius: 8px;" />
-      </a>
+      <a href="index.html" class="logo" aria-label="Disadhi Ranasinghe home">DR</a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -63,7 +61,12 @@
         <div class="contact-card contact-form-card reveal delay-1">
           <span class="section-label">Message</span>
           <h2>Send a Quick Message</h2>
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/ranasinghedisadhi@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from Disadhi Ranasinghe portfolio" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
@@ -73,8 +76,8 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
 
-            <button type="submit" class="btn btn-primary">Open Email App</button>
-            <p class="form-note">This static form opens your email app with the message filled in.</p>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note">Your message will be sent directly to my email inbox.</p>
           </form>
         </div>
       </div>
