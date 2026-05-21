@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
   --bg: #07111f;
@@ -40,7 +40,7 @@ img { width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button, input, textarea { font: inherit; }
-.container { width: min(1160px, 90%); margin: 0 auto; }
+.container { width: min(1160px, 90%); max-width: 1160px; margin: 0 auto; padding-inline: 20px; }
 .section { padding: 100px 0; }
 .compact-section { padding: 34px 0 76px; }
 .top-space { margin-top: 26px; }
@@ -62,22 +62,56 @@ button, input, textarea { font: inherit; }
   gap: 24px;
 }
 .logo {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 72px;
-  height: 56px;
-  padding: 0 14px;
-  background: none;
-  color: var(--white);
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: -0.08em;
-  border: none;
+  min-width: auto;
+  height: auto;
+  padding: 8px 2px;
+  background: transparent;
+  border: 0;
   box-shadow: none;
-  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.055em;
   text-transform: uppercase;
 }
+.logo::before {
+  content: "";
+  position: absolute;
+  inset: -8px -14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(167, 139, 250, 0.12));
+  opacity: 0;
+  transform: scale(0.92);
+  transition: var(--transition);
+}
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.28);
+  transform: scaleX(0.72);
+  transform-origin: left;
+  transition: var(--transition);
+}
+.logo:hover::before,
+.logo:focus-visible::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.logo:hover::after,
+.logo:focus-visible::after { transform: scaleX(1); }
+.logo:focus-visible { outline: none; }
 .footer-logo {
   width: 48px;
   height: 48px;
@@ -668,6 +702,7 @@ button, input, textarea { font: inherit; }
   box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.14);
 }
 .contact-form button { margin-top: 12px; width: max-content; }
+.contact-form button:disabled { opacity: 0.7; cursor: not-allowed; }
 .form-note { color: var(--body); font-size: 0.92rem; }
 .professional-summary {
   max-width: 900px;
@@ -726,12 +761,7 @@ button, input, textarea { font: inherit; }
   text-align: center;
   border-top: 1px solid rgba(148, 163, 184, 0.16);
 }
-/* Ensure the paragraph inside footer-bottom is centered and not constrained */
-.footer-bottom p {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 100%;
-}
+.footer-bottom p { max-width: none; margin: 0 auto; text-align: center; }
 @media (max-width: 920px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
@@ -856,16 +886,23 @@ button, input, textarea { font: inherit; }
 }
 
 @media (max-width: 520px) {
+  .container { padding-inline: 16px; }
   .hero-buttons,
   .about-actions,
   .project-actions,
   .contact-actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
+  .hero-home { padding: 68px 0 66px; }
+  .page-hero { padding: 64px 0 54px; }
+  .hero-grid, .page-hero-grid, .split-grid, .modern-about-grid, .skill-layout, .contact-grid { gap: 28px; }
   .profile-card { border-radius: 28px; padding: 12px; }
   .profile-card::before { display: none; }
   .profile-card img { height: 360px; border-radius: 22px; }
   .status-pill { top: 24px; left: 24px; }
   .about-image img { height: 430px; }
+  .about-image img,
+  .project-preview img,
+  .certificate-card img { max-height: 320px; height: auto; }
   .loader-box { padding: 30px 22px; }
   .section-heading h2,
   .about-text h2,
@@ -876,4 +913,21 @@ button, input, textarea { font: inherit; }
   .footer-brand-title { font-size: 1.65rem; }
   .footer-social { width: 100%; justify-content: flex-start; }
   .footer-links { gap: 10px; }
+}
+
+@media (max-width: 440px) {
+  .section { padding: 48px 0; }
+  .compact-section { padding: 22px 0 42px; }
+  .hero-orb,
+  .hero-orb-one,
+  .hero-orb-two,
+  .profile-card::before { display: none; }
+  .hero-text h1,
+  .page-hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .lead { font-size: 0.98rem; }
+  .timeline { grid-template-columns: 1fr; }
+  .footer::before { font-size: 3rem; top: 10px; }
+  .footer-grid { gap: 18px; padding-top: 42px; }
+  .nav { inset: 76px 12px auto 12px; padding: 14px; }
+  .contact-strip-inner { flex-direction: column; gap: 18px; }
 }
