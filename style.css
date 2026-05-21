@@ -74,6 +74,13 @@ button, input, textarea { font: inherit; }
   font-weight: 900;
   letter-spacing: -0.08em;
   box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
+  overflow: hidden;
+}
+.logo img,
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .logo span { opacity: 0.75; }
 .nav { display: flex; align-items: center; gap: 8px; }
@@ -825,6 +832,10 @@ button, input, textarea { font: inherit; }
   .timeline { grid-template-columns: 1fr; }
   .contact-strip-inner { align-items: flex-start; flex-direction: column; padding: 30px; }
   .footer-grid { grid-template-columns: 1fr; padding-top: 52px; }
+  .footer::before { font-size: 5.4rem; top: 16px; }
+  .footer-social { justify-content: flex-start; }
+  .footer-links { gap: 10px; }
+  .footer-contact p { margin-bottom: 10px; }
   .about-image img { height: 520px; }
   .project-image-wrap { min-height: 250px; }
 }
@@ -845,4 +856,9 @@ button, input, textarea { font: inherit; }
   .about-text h2,
   .contact-card h2,
   .professional-summary h2 { letter-spacing: -0.045em; }
+  .footer::before { font-size: 4rem; top: 12px; }
+  .footer-grid { padding: 58px 0 24px; gap: 24px; }
+  .footer-brand-title { font-size: 1.65rem; }
+  .footer-social { width: 100%; justify-content: flex-start; }
+  .footer-links { gap: 10px; }
 }
